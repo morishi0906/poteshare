@@ -1,0 +1,16 @@
+<div class="users-sidebar">
+  <div class="users-sidebar-link users-now"><%= link_to "アカウント", "/user/#{session[:user_id]}/account", class: "users-link users-now-link" %></div>
+  <div class="users-sidebar-link"><%= link_to "プロフィール", "/user/#{session[:user_id]}/profile", class: "users-link" %></div>
+</div>
+<div class="users-account">
+  <h3 class="users-tittle">アカウント</h3>
+  <div class="users-mail-address">
+   <h4>メールアドレス：<span><%= @users.mail %></span></h4>
+  </div>
+  <div class="users-password">
+    <h4>パスワード：<span>******</span></h4>
+  </div>
+  <div class="users-edit">
+    <%= link_to "編集", "/user/#{session[:user_id]}/edit", class: "login link" %>
+  </div>
+</div>

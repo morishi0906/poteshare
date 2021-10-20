@@ -1,0 +1,34 @@
+<div class="room-all">
+  <div class="room-contents">
+    <%= image_tag(@rooms.room_img.url, alt: "room", class: "room-image") %>
+    <div class="room-user">
+      <% if  @register.user_img.url == nil %>
+        <%= image_tag("poteicon", alt: "profile-icon", class: "room-user-img") %>
+      <% else %>
+        <%= image_tag(@register.user_img.url, alt: "profile-icon", class: "room-user-img") %>
+      <% end %>  
+      <div class="room-profile">
+        <h4><%= @rooms.room_name %></h4>
+        <p><%= @rooms.address %></p>
+      </div>
+    </div>
+    <div class="room-message">
+      <p><%= @rooms.room_message %></p>
+    </div> 
+  </div>
+  <%= form_with url: "/room/reserve", method: :post do |f| %>
+  <div class="room-reserve">
+    <%= f.hidden_field :price, value: @rooms.price %>
+    <h4><%= @rooms.price %>円 /日</h4>
+    <p>開始日</p>
+    <%= f.date_field :startday, class: "room-reserve-text" %>
+    <p>終了日</p>
+    <%= f.date_field :endday, class: "room-reserve-text" %>
+    <p>人数</p>
+    <%= f.number_field :people, class: "room-reserve-text", min: "1" %>
+    <%= f.hidden_field :room_id, value: @rooms.id %> 
+    <%= f.hidden_field :user_id, value: session[:user_id] %> 
+    <%= f.submit "予約する", class: "room-reserve-button" %>
+  </div>
+  <% end %>
+</div>

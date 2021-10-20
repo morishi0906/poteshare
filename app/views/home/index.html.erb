@@ -1,0 +1,70 @@
+<div class="home-top">
+  <div class="area-search">
+    <p><span>PoteShare</span>で</p>
+    <p> まだ体験したことのない旅をしよう</p>
+    <h6>エリア</h6>
+    <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+      <%= f.text_field :name, class: "index-search-text", value: "東京", placeholder: "エリア" %>
+      <%= f.submit "探す", class: "area-search-button" %>
+    <% end %>  
+  </div>
+</div>
+<div class="recommend-area">
+  <h3>おすすめのエリア</h3>
+  <div class="recommended-img-all">
+    <div class="recommended-block">
+      <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+        <%= image_tag("img_tokyo.jpg", alt: "tokyo", class: "recommended-img") %>
+        <%= f.hidden_field :name, value: "東京"%>
+        <%= f.submit "東京", class: "recommend-button" %>
+      <% end %> 
+    </div>
+    <div class="recommended-block">
+      <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+        <%= image_tag("img_osaka.jpg", alt: "Rails icon", class: "recommended-img") %>
+        <%= f.hidden_field :name, value: "大阪"%>
+        <%= f.submit "大阪", class: "recommend-button" %>
+      <% end %> 
+    </div>
+    <div class="recommended-block">
+      <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+        <%= image_tag("img_kyoto.jpg", alt: "Rails icon", class: "recommended-img") %>
+        <%= f.hidden_field :name, value: "京都"%>
+        <%= f.submit "京都", class: "recommend-button" %>
+      <% end %> 
+    </div>
+    <div class="recommended-block">
+      <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+        <%= image_tag("image_oarai.jpg", alt: "Rails icon", class: "recommended-img") %>
+        <%= f.hidden_field :name, value: "大洗"%>
+        <%= f.submit "大洗", class: "recommend-button" %>
+      <% end %> 
+    </div>
+    <div class="recommended-block">
+      <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+        <%= image_tag("img_sapporo.jpg", alt: "Rails icon", class: "recommended-img") %>
+        <%= f.hidden_field :name, value: "札幌"%>
+        <%= f.submit "札幌", class: "recommend-button" %>
+      <% end %> 
+    </div>
+  </div>
+  <div class="slider">
+    <li><%= image_tag("img_tokyo.jpg", alt: "Rails icon", class: "area-slide") %><p>東京</p></li>
+    <li><%= image_tag("img_osaka.jpg", alt: "Rails icon", class: "area-slide") %><p>大阪</p></li>
+    <li><%= image_tag("img_kyoto.jpg", alt: "Rails icon", class: "area-slide") %><p>京都</p></li>
+    <li><%= image_tag("image_oarai.jpg", alt: "Rails icon", class: "area-slide") %><p>大洗</p></li>
+    <li><%= image_tag("img_sapporo.jpg", alt: "Rails icon", class: "area-slide") %><p>札幌</p></li>
+  </div>
+</div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+     $('.slider').bxSlider({
+      auto: false,
+      pause: 5000,
+    });
+  });
+</script>

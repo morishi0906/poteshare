@@ -1,0 +1,20 @@
+<div class="edit-all">
+  <h2 class="user-edit">アカウント編集</h2>
+  <%= form_with url: "/user/#{session[:user_id]}/update", method: :post do |f| %>
+  <div class="edit-mail">
+    <%= f.hidden_field :id, value: @users.id %>
+    <p>メールアドレス</p>
+    <%= f.text_field :mail, class: "edit-text", value: @users.mail %>
+  </div>
+  <div class="edit-password">
+    <p>変更後パスワード（変更する場合のみ入力）</p>
+    <%= f.text_field :password, class: "edit-text" %>
+  </div>
+  <div class="edit-password">
+    <p>パスワード確認用（変更する場合のみ入力）</p>
+    <%= f.text_field :password_confirmation, class: "edit-text" %>
+  </div>
+  <button class="edit-button" type="submit">更新</button>
+  <% end %>
+  <button class="return-button" type="submit" onclick="history.back()">戻る</button>
+</div>

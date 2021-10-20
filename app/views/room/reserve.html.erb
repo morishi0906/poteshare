@@ -1,0 +1,22 @@
+<div class="reserve-check">
+  <h3>予約内容確認</h3>
+  <%= form_with url: "/room/complete", method: :post do |f| %>
+  <h4><%= @rooms.price %>円 /日</h4>
+  <p>開始日</p>
+  <%= @rooms.startday %>
+  <%= f.hidden_field :startday, value: @rooms.startday %>
+  <p>終了日</p>
+  <%= @rooms.endday %>
+  <%= f.hidden_field :endday, value: @rooms.endday %>
+  <p class="reseve-border">使用日数: <%= @days %>日</p>
+  <p class="reseve-border">人数: <%= @rooms.people %>人</p>
+  <p>合計金額</p>
+  <%= @all_price %>円
+  <%= f.hidden_field :price, value: @all_price %>
+  <%= f.hidden_field :people, value: @rooms.people %>
+  <%= f.hidden_field :room_id, value: @rooms.room_id %> 
+  <%= f.hidden_field :user_id, value: @rooms.user_id %> 
+  <%= f.submit "予約を確定する", class: "reserve-check-button" %>
+  <% end %>
+  <button class="return-button" type="submit" onclick="history.back()">戻る</button>
+</div>

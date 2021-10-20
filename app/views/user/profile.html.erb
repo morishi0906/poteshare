@@ -1,0 +1,34 @@
+<div class="users-sidebar">
+  <div class="users-sidebar-link">
+    <%= link_to "アカウント", "/user/#{session[:user_id]}/account", class: "users-link" %>
+  </div>
+  <div class="users-sidebar-link users-now">
+    <%= link_to "プロフィール", "/user/#{session[:user_id]}/profile", class: "users-link users-now-link" %>
+  </div>
+</div>
+<div class="users-profile">
+  <h3 class="users-tittle">プロフィール</h3>
+  <%= form_with url: "/user/#{session[:user_id]}/profileupdate", method: :post do |f| %>
+  <div class="users-profile-img">
+    <% if  @users.user_img.url == nil %>
+      <%= image_tag("poteicon", alt: "profile-icon", class: "profile-img") %>
+    <% else %>
+      <%= image_tag(@users.user_img.url, alt: "profile-icon", class: "profile-img") %>
+    <% end %> 
+  </div>
+  <div class="users-profile-img-edit">
+    <h4>アイコン画像<span>必須</span><%= f.file_field :user_img, class: "img-edit-button" %></h4>
+  </div>
+  <div class="users-name">
+    <h4>名前<span>必須</span></h4>
+    <%= f.text_field :name, class: "users-name-text", value: @users.name %>
+  </div>
+  <div class="users-message">
+    <h4>自己紹介</h4>
+    <%= f.text_area :message, class: "users-message-text", value: @users.message, placeholder: "自己紹介を入力" %>
+  </div>
+  <div class="users-edit">
+    <%= f.submit "更新", class: "update-button" %>
+  </div>
+  <% end %>
+</div>

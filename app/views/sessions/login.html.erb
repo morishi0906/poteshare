@@ -1,0 +1,14 @@
+<div class="login-all">
+  <h3 class="login-tittle">ログイン</h3>
+  <%= form_with url: "/login", method: :post do |f| %>
+  <div class="login-mail">
+    <span>必須</span>
+    <%= f.text_field :mail, class: "login-text", placeholder: "メールアドレス" %>
+  </div>
+  <div class="login-password">
+    <span>必須</span>
+    <%= f.password_field :password, class: "login-text", id: "session_password", placeholder: "パスワード" %>
+  </div>
+  <%= f.submit "ログイン", class: "login-button" %>
+  <% end %>
+</div>

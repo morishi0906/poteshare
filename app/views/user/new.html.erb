@@ -1,0 +1,23 @@
+<div class="login-all">
+  <h3 class="user-create">新しいアカウントを作成</h3>
+  <%= form_with url: "/user/create", method: :post do |f| %>
+  <div class="login-name">
+    <span>必須</span>
+    <%= f.text_field :name, class: "login-text", placeholder: "ユーザー名" %>
+  </div>
+  <div class="login-mail">
+    <span>必須</span>
+    <%= f.text_field :mail, class: "login-text", placeholder: "メールアドレス" %>
+  </div>
+  <div class="login-password">
+    <span>必須</span>
+    <%= f.text_field :password, class: "login-text", placeholder: "パスワード(6文字以上 12文字以下)" %>
+  </div>
+  <div class="login-password">
+    <span>必須</span>
+    <%= f.text_field :password_confirmation, class: "login-text", placeholder: "パスワード確認" %>
+  </div>
+  <%= f.submit "新しいアカウントを作成", class: "login-button" %>
+  <% end %>
+  <%= link_to " すでにアカウントをお持ちの方はログイン", "/user/login", class: "link logined" %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room_name: MyString
+  room_message: MyText
+  price: 1
+  address: MyString
+  room_img: MyString
+  register: MyString
+
+two:
+  room_name: MyString
+  room_message: MyText
+  price: 1
+  address: MyString
+  room_img: MyString
+  register: MyString
