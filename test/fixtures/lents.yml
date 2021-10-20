@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startday: 2021-10-19
+  endday: 2021-10-19
+  people: 1
+  room_id: 1
+  user_id: 1
+  price: 1
+
+two:
+  startday: 2021-10-19
+  endday: 2021-10-19
+  people: 1
+  room_id: 1
+  user_id: 1
+  price: 1

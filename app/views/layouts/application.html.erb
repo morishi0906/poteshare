@@ -3,12 +3,65 @@
   <head>
     <title>PoteShare</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <%= link_to image_tag("potesharelogo.png", alt: "PoteShare icon", class: "logo-image"), "/" %>
+      <div class="header-search-all">
+        <div class="header-search">
+          <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+            <i class="fas fa-map-marker-alt"></i>
+            <%= f.text_field :name, class: "header-search-text", placeholder: "エリア" %>
+          <% end %>  
+        </div>
+        <div class="header-search">
+          <%= form_with url: "/rooms", method: :post, local: true do |f| %>
+            <i class="fas fa-search"></i>
+            <%= f.text_field :search, class: "header-search-text", placeholder: "キーワード" %>
+          <% end %>  
+        </div>
+      </div>  
+      <% if session[:user_id] == nil %>
+        <div class="login-link-all">
+          <%= link_to "新規登録", "/user/new", class: "login link" %>
+          <%= link_to "ログイン", "/login", class: "login link" %>
+        </div>
+      <% else %>
+        <div class="users-login-img">
+          <input id="menu" type="checkbox" />
+          <label for="menu" class="open">
+            <div class="header-name">
+              <%= @users.name %>
+              <% if  @users.user_img.url == nil %>
+                <%= image_tag("poteicon", alt: "profile-icon", class: "login-img") %>
+              <% else %>
+                <%= image_tag(@users.user_img.url, alt: "profile-icon", class: "login-img") %>
+              <% end %>  
+            </div>
+          </label>
+          <label for="menu" class="back"></label>
+          <aside>
+            <nav>  
+              <div class="login-img-link">
+                <p><%= link_to "アカウント", "/user/#{session[:user_id]}/account", class: "img-link" %></p>
+                <p><%= link_to 'プロフィール', "/user/#{session[:user_id]}/profile", class: "img-link"  %></p>
+                <p><%= link_to 'ルーム登録', "/room/new", class: "img-link"  %></p>
+                <p><%= link_to '予約済みルーム', "/user/#{session[:user_id]}/reserveroom", class: "img-link"  %></p>
+                <p><%= link_to '登録済みルーム', "/user/#{session[:user_id]}/createroom", class: "img-link" %></p>
+                <p><%= link_to 'ログアウト', "/logout" , method: :post, class: "img-link"  %></p>
+              </div>   
+            </nav>
+          </aside>  
+        </div>
+      <% end %>  
+    </header>
+    <div class="flash"><%= flash[:notice] %></div>
     <%= yield %>
+    <footer>
+      <p class = "footer-text">PoteShare</h6>
+    </footer>
   </body>
 </html>

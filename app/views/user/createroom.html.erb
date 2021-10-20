@@ -1,0 +1,27 @@
+<div class="createroom-all">
+  <h2>登録済みルーム</h2>
+  <table>
+    <thead>
+        <tr>
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>料金</th>
+          <th>作成日</th>
+        </tr>
+    </thead>
+    <tbody>
+      <div class="createroom-list">
+        <% @rooms.each do |room| %>
+        <tr>
+          <td><%= image_tag(room.room_img.url, alt: "Room-image", class: "createroom-img") %></td>
+          <td><%= link_to room.room_name, "/room/#{room.id}/show",class: "link link-show" %></td>
+          <td><%= room.room_message %></td>
+          <td><%= room.price %></td>
+          <td><%= room.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+        </tr>
+        </div>
+        <% end %>
+    </tbody>
+  </table>  
+</div>

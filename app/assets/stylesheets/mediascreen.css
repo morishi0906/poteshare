@@ -1,0 +1,204 @@
+@media screen and (max-width:840px){
+.logo-image {
+  width: 100px;
+  height: 80px;
+}  
+.header-search {
+  position: absolute;
+  left: 120px;
+  width: 90px;
+}
+  
+.header-search-text {
+  font-size: 9px;
+  width: 60px;
+  margin-right: 0;
+}
+
+.header-name {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+
+.login {
+  width: 50px;
+  height: 10px;
+  padding: 10px;
+}
+
+.login-link-all {
+  position: absolute;
+  right: 0;
+  width: 220px;
+  margin-left: 10px;
+}
+
+.area-search {
+  width: 350px;
+  margin: 10px 0 0 70px;
+}  
+
+.area-search p {
+  margin-left: 15px;
+}
+
+.area-search input {
+  width: 280px;
+}
+
+.recommend-area {
+  width: 470px;
+}
+
+.area-slide {
+  width: 300px;
+}  
+
+.slider p {
+  margin: 0 0 0 200px;
+}
+
+.users-sidebar {
+  width: 100px;
+}
+
+.users-sidebar-link {
+  font-size: 13px;
+  width: 80px;
+  height: 25px;
+  margin: 30px 0 0 10px;
+}
+
+.users-now {
+  border-right :solid 3px #56d;
+}
+
+.users-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.users-account {
+  width: 350px;
+  margin: 30px 0 266px 120px;
+}
+
+.users-profile {
+  font-size: 12px;
+  width: 350px;
+  height: 516px;
+  margin: 30px 0 0 120px;
+}
+
+.users-tittle,.users-mail-address,.users-password,.users-profile-img,.users-name,.users-message,.users-profile-img-edit {
+  width: 290px;
+}
+
+.users-name span,.users-profile-img-edit span {
+  margin: 0 10px 0 10px;
+  padding: 5px 5px;
+}
+
+.users-name-text {
+  width: 170px;
+  margin: 10px 0 0 10px;
+}
+
+.users-message {
+  height: 100px;
+}
+
+.users-message-text {
+  width: 170px;
+  height: 90px;
+  margin-left: 40px;
+}
+
+.room-new-all {
+  width: 400px;
+  height: 530px;
+}
+
+.room-new-tittle,.room-new-img {
+  width: 370px;
+}
+
+.room-new-img {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.room-text,.room-message-text,.room-price-text,.room-address-text {
+  width: 240px;
+}
+
+.room-text {
+  margin-left: 30px;
+}
+
+.room-message-text {
+  margin-left: 20px;
+}
+
+.room-new-all h4 {
+  font-size: 11px;
+}
+
+.room-new-all span {
+  padding: 5px 5px;
+}
+
+.reserve-compleate {
+  width: 420px;
+}
+
+.reserve-compleate h3 {
+  width: 380px;
+}
+}
+
+@media screen and (max-width:1060px){
+.room-all {
+  width: 540px;
+  height: 930px;
+  margin: 60px auto;
+}
+  
+.room-image {
+  width: 410px;
+  height: 280px;
+}
+
+.room-contents {
+  float: none;
+  width: 430px;
+  margin: 0 auto;
+}
+
+.room-reserve {
+  float: none;
+  width: 375px;
+  margin: 20px auto;
+}
+
+.rooms-all {
+  width: 400px;
+  margin-left: 80px;
+}
+}
+
+@media (max-width: 1350px) and (min-width: 1060px) {
+.rooms-all {
+  width: 1300px;
+  margin-left: 50px;
+}
+}
+
+@media (max-width: 1060px) and (min-width: 840px) {
+.rooms-all {
+  width: 800px;
+  margin-left: 100px;
+}
+}  

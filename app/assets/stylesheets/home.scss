@@ -1,0 +1,685 @@
+body {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+}
+
+.flash {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #56d;
+  font-size: 16px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link-show {
+  font-size: 20px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #9ad;
+}
+
+.logo-image {
+  width: 200px;
+}
+
+.header-search-all {
+  display: flex;
+  width: 600px;
+  margin-left: 200px;
+}
+
+.header-search {
+  width: 180px;
+  height: 35px;
+  margin-top: -60px;
+  margin-right: 10px;
+  background-color: #fff;
+  padding-left: 10px;
+  border-radius: 5px 5px;
+}
+
+.header-search-text {
+  width: 150px;
+  height: 33px;
+  margin: auto;
+  border: none;
+　outline: none;
+}
+
+.header-name {
+  position: absolute;
+  right: 0;
+  display: flex;
+  font-weight: bold;
+}
+
+.login-link-all,.users-login-img {
+  float: right;
+  margin-top: -55px;
+}
+
+.login-img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: -15px 20px 0 20px;
+  border-radius: 25px 25px;
+}
+
+.login-img:hover {
+  cursor : pointer;
+}
+
+aside {
+  position: absolute;
+  left: -2000px;
+  width: 100%;
+  margin: 40px auto;
+}         
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -50vw;
+}
+
+input[type="checkbox"]:checked ~ aside {
+  left: 0;
+}
+
+input[type="checkbox"]:checked ~ .back {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  display: block;
+  width: 200px;
+  height: 250px;
+  background: rgba(80, 80, 150, 0.7) !important;
+  border-radius: 0 0 0 25px;
+  z-index: 5;
+}
+
+.login-img-link {
+  position: absolute;
+  right: 45px;
+  z-index: 10;
+}
+
+.img-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login {
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 20px;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.home-top {
+  width: 100%;
+  height: 300px;
+  background-image: image-url("img_cover_top.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+  padding-top: 60px;
+}
+
+.area-search {
+  width: 450px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 25px 25px;
+  margin: 10px 0 0 100px;
+  padding-top: 15px;
+}
+
+.area-search p {
+  font-size: 20px;
+  line-height: 5px;
+  margin-left: 30px;
+}
+
+.area-search span {
+  font-size: 26px;
+  
+}
+
+.area-search h6 {
+  color: #888;
+  margin: 10px 0 0 30px;
+}
+
+.area-search input {
+  width: 380px;
+  height: 30px;
+  margin: 10px 30px;
+}
+
+.area-search-button {
+  font-size: 22px;
+  color: #fff;
+  width: 380px;
+  height: 40px;
+  margin-left: 35px;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.area-slide {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.recommend-area {
+  width: 600px;
+  margin: 0 auto;
+  text-arigin: center;
+}
+
+.recommend-area h3 {
+  width: 150px;
+  margin: 20px auto;
+}
+
+.recommended-img-all {
+  display: flex;
+  width: 500px;
+  height: 140px;
+  margin: 20px auto 40px;
+}
+
+.recommended-block {
+  width: 90px;
+  height: 140px;
+  margin: 0 3px;
+}
+
+.recommended-img {
+  width: 90px;
+  height: 120px;
+}
+
+.recommend-button {
+  margin-left: 10px;
+  background-color: #fff;
+  width: 70px;
+  border: 2px solid #56d;
+  border-radius: 10px 10px;
+}
+
+.slider p {
+  font-size: 24px;
+  margin: 0 0 0 280px;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #9ad;
+}
+
+.footer-text  {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  width: 55px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.login-all {
+  width: 350px;
+  height: 420px;
+  margin: 60px auto;
+}
+
+.login-all span {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #f66;
+  border-radius: 5px 5px;
+}
+
+.login-tittle {
+  width: 80px;
+  margin: 20px auto;
+}
+
+.user-create {
+  width: 210px;
+  margin: 20px auto;
+}
+
+.login-mail, .login-password, .login-name {
+  width: 350px;
+  height: 30px;
+  margin-bottom: 20px;
+  
+}
+
+.login-text {
+  width: 260px;
+  height: 25px;
+}
+
+.login-button,.edit-button,.reserve-check-button,.room-create-button,.room-reserve-button {
+  font-size: 22px;
+  color: #fff;
+  width: 350px;
+  height: 40px;
+  margin: 15px 0 ;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.area-search-button {
+  font-size: 18px;
+  color: #fff;
+  width: 350px;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.return-button {
+  font-size: 22px;
+  color: #fff;
+  width: 350px;
+  height: 40px;
+  background-color: #9ad;
+  border-radius: 25px 25px;
+}
+
+.update-button {
+  font-size: 22px;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto ;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.logined {
+  margin-left: 20px;
+}
+
+.rooms-all {
+  width: 1360px;
+  margin: 10px auto;
+}
+
+.rooms-show {
+  display: inline-block;
+  height: 100%;
+}
+
+.rooms-content {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #9ad;
+  border-radius: 10px 10px;
+}
+
+.rooms-content p {
+  margin: 0;
+}
+
+.rooms-image {
+  width: 300px;
+  height: 220px;
+}
+
+.users-sidebar {
+  position: absolute;
+  width: 200px;
+  height: 550px;
+  background-color: #eef;
+  border-right : solid 2px #9ad;
+}
+
+.users-sidebar-link {
+  width: 110px;
+  height: 25px;
+  margin: 30px 0 0 50px;
+  
+}
+
+.users-now {
+  border-right :solid 3px #56d;
+}
+
+.users-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.users-now-link {
+  color: #56d;
+}
+
+.users-account {
+  text-aligin: center;
+  width: 600px;
+  height: 250px;
+  margin: 30px auto 266px;
+  background-color: #eef;
+  border: 2px solid #9ad;
+}
+
+.users-profile {
+  text-aligin: center;
+  width: 600px;
+  height: 526px;
+  margin: 10px auto 10px;
+  background-color: #eef;
+  border: 2px solid #9ad;
+  border-radius: 25px 25px;
+}
+
+.users-tittle {
+  height: 30px;
+}
+
+.users-tittle,.users-mail-address,.users-password,.users-profile-img,.users-name,.users-message,.users-profile-img-edit {
+  width: 540px;
+  margin: 10px 0 0 30px;
+  border-bottom: 1px solid #9ad;
+}
+
+.users-name {
+  display: flex;
+  height: 60px;
+}
+
+.users-message {
+  display: flex;
+  height: 140px;
+}
+
+.users-name span,.users-profile-img-edit span {
+  color: #fff;
+  margin: 0 10px 0 10px;
+  padding: 5px 10px;
+  background-color: #f66;
+  border-radius: 5px 5px;
+  font-weight: bold;
+}
+
+.users-name-text{
+  width: 380px;
+  height: 30px;
+  margin: 10px 0 0 30px;
+  
+}
+
+.users-message-text {
+  width: 380px;
+  height: 120px;
+  margin-left: 70px;
+}
+
+.users-edit {
+  width: 540px;
+  margin: 20px 0 0 30px;
+}
+
+.users-mail-address span {
+  margin-left: 10px;
+}
+
+.users-password span {
+  margin-left: 40px;
+  overflow-wrap: break-word;
+}
+
+.profile-img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+  border-radius: 40px 40px;
+}
+
+.img-edit-button {
+  margin-left: 50px;
+}
+
+.edit-all {
+  width: 500px;
+  height: 500px;
+  margin: 25px auto;
+  text-align: center;
+}
+.edit-all p {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.edit-name,.edit-password {
+  margin-bottom: 10px;
+}
+
+.edit-text {
+  width: 400px;
+  height: 25px;
+}
+
+.room-image {
+  width: 600px;
+  height: 350px;
+}
+
+.room-all {
+  width: 1030px;
+  height: 520px;
+  margin: 60px auto;
+}
+
+.room-contents {
+  float: left;
+  width: 600px;
+}
+
+.room-user {
+  display: flex;
+  border-bottom: 1px solid #9ad;
+}
+
+.room-user-img {
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
+  border-radius: 40px 40px;
+}
+
+.room-profile{
+  margin-left: 20px;
+}
+
+.room-profile p {
+  margin-top: -15px;
+}
+
+.room-message {
+  height: 80px;
+  border-bottom: 1px solid #9ad;
+}
+
+.room-message p {
+  display: block;
+  width: 600px;
+  height: 50px;
+  overflow-wrap: break-word;
+}
+
+.room-reserve {
+  float: right;
+  width: 375px;
+  height: 450px;
+  margin-left: 20px;
+  padding-left: 30px;
+  border: 1px solid #9ad;
+  border-radius: 25px 25px;
+}
+
+.room-reserve p {
+  margin: 20px 0 0 0 ;
+  font-weight: bold;
+}
+
+.room-reserve-button {
+  margin-top: 40px;
+}
+
+.reserve-check {
+  width: 375px;
+  height: 500px;
+  margin: 20px auto;
+  padding-left: 30px;
+  border: 1px solid #9ad;
+  border-radius: 25px 25px;
+}
+
+.reserve-check h3,.reserve-check h4,.reseve-border {
+  width: 345px;
+  border-bottom: 1px solid #9ad;
+}
+
+.reserve-check p {
+  margin: 10px 0 0 0 ;
+  font-weight: bold;
+}
+
+.reserve-check-button {
+  margin-top: 20px;
+}
+
+.reserve-compleate-tittle {
+  display: block;
+  width: 220px;
+  margin: 40px auto;
+}
+
+.reserve-compleate {
+  width: 500px;
+  height: 220px;
+  margin: 20px auto 20px;
+  padding-left: 30px;
+  border: 1px solid #9ad;
+  border-radius: 25px 25px;
+}
+
+.reserve-compleate h3 {
+  border-bottom: 1px solid #9ad;
+  width: 470px;
+}
+
+.room-reserve-text {
+  width: 340px;
+  height: 30px;
+}
+
+.compleate-button {
+  display: block;
+  color: #fff;
+  width: 96px;
+  margin: 10px auto 130px;
+  padding: 10px 25px;
+  background-color: #56d;
+  border-radius: 25px 25px;
+}
+
+.room-new-all {
+  width: 600px;
+  height: 530px;
+  margin: 60px auto;
+  padding-left: 20px;
+  border: 2px solid #9ad;
+  border-radius: 25px 25px;
+}
+
+.room-new-all span {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 0 10px;
+  background-color: #f66;
+  border-radius: 5px 5px;
+}
+
+.room-new-tittle,.room-new-img {
+  width: 580px;
+  border-bottom: 1px solid #9ad;
+}
+
+.room-new-name,.room-new-message,.room-price,.room-address-text,.room-address,.room-new-img {
+  display: flex;
+}
+
+.room-text {
+  width: 400px;
+  height: 25px;
+  margin: 20px;
+} 
+
+.room-message-text {
+  width: 400px;
+  height: 100px;
+  margin-left: 3px;
+}
+
+.room-price-text,.room-address-text {
+  width: 400px;
+  height: 25px;
+  margin: 20px 0 0 50px;
+} 
+
+.room-img-button {
+  margin: 20px 0 0 10px;
+}
+
+.room-create-button {
+  display: block;
+  margin: 20px auto;
+}
+
+.createroom-all,.reserveroom-all {
+  margin: 10px 30px;
+}
+
+.createroom-all h2,.reserveroom-all h2 {
+  margin-left: 50px;
+}
+
+.createroom-all td,.reserveroom-all td {
+  padding: 10px 10px;
+}
+
+.createroom-all thead,.reserveroom-all thead {
+  width: 100%;
+  background-color: #abf;
+}
+
+.createroom-img {
+  width: 140px;
+  height: 70px;
+}

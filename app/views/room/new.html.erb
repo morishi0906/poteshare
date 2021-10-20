@@ -1,0 +1,29 @@
+<div class="room-new-all">
+  <h3 class="room-new-tittle">ルーム情報登録</h3>
+  <%= form_with url: "/room/create", method: :post do |f| %>
+  <div class="room-new-name">
+    <h4>ルーム名<span>必須</span></h4>
+    <%= f.text_field :room_name, class: "room-text", placeholder: "ルーム名" %>
+  </div>
+  <div class="room-new-message">
+    <h4>ルーム紹介<span>必須</span></h4>
+    <%= f.text_area :room_message, class: "room-message-text", placeholder: "ルーム説明を入力" %>
+  </div>
+  <div class="room-price">
+    <h4>料金<span>必須</span></h4>
+    <%= f.number_field :price, class: "room-price-text", placeholder: "１日あたりの金額を入力", min: "0" %>
+  </div>
+  <div class="room-address">
+    <h4>住所<span>必須</span></h4>
+    <%= f.text_field :address, class: "room-address-text", placeholder: "住所を入力" %>
+  </div>
+  <div class="room-new-img">
+    <h4>ルーム画像<span>必須</span></h4>
+    <%= f.file_field :room_img, class: "room-img-button" %>
+  </div>
+  <div class="room-create">
+    <%= f.submit "新しいルームを登録", class: "room-create-button" %>
+  </div>
+  <%= f.hidden_field :user_id, value: session[:user_id] %>  
+  <% end %>
+</div>

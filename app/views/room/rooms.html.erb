@@ -1,0 +1,13 @@
+<div class="rooms-all">
+  <h2>"<%= @search_word %>" 検索結果：<%= @rooms.count %>件</h2>
+  <% @rooms.each do |room| %>
+    <div class="rooms-show">
+      <div class="rooms-content">
+        <%= link_to image_tag(room.room_img.url, alt: "room", class: "rooms-image"),"room/#{room.id}/show" %>
+        <p><%= room.room_name %></p>
+        <p>住所：<%= room.address %></p>
+        <p><%= room.price %>円</p>
+      </div>
+    </div>
+  <% end %>
+</div>

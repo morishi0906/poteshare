@@ -1,0 +1,29 @@
+<div class="reserveroom-all">
+  <h2>予約済みルーム</h2>
+  <table>
+    <thead>
+        <tr>
+          <th>ルーム画像</th>
+          <th>ルーム名</th>
+          <th>ルーム紹介</th>
+          <th>合計料金</th>
+          <th>開始日</th>
+          <th>終了日</th>
+          <th>作成日</th>
+        </tr>
+    </thead>
+    <tbody>
+       <% @lents.each do |lent| %>
+        <tr>
+          <td><%= image_tag(lent.room.room_img.url, alt: "Room-image", class: "createroom-img") %></td>
+          <td><%= link_to lent.room.room_name, "/room/#{lent.room.id}/show",class: "link link-show" %></td>
+          <td><%= lent.room.room_message %></td>
+          <td><%= lent.price %></td>
+          <td><%= lent.startday %></td>
+          <td><%= lent.endday %></td>
+          <td><%= lent.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,8 @@
+<h2 class="reserve-compleate-tittle">予約が完了しました</h2>
+<div class="reserve-compleate">
+  <h3>予約した部屋: <%= @rooms.room_name %></h3>
+  <h3>開始日: 　　　<%= @lents.startday %></h3>
+  <h3>終了日:　　　 <%= @lents.endday %></h3>
+  <h3>価格:　　　　 <%= @lents.price %>円</h3>
+</div>  
+<%= link_to "ホームへ戻る", "/", class: "compleate-button link" %>
